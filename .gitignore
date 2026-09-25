@@ -1,3 +1,4 @@
 .agents/
 *.log
 .DS_Store
+extension.zip
