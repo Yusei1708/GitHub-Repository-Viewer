@@ -2,5 +2,7 @@
 *.log
 .DS_Store
 extension.zip
+tests/
+scripts/
 *.md
 !README.md

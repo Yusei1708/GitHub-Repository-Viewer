@@ -11,7 +11,6 @@ Một tiện ích mở rộng (Chrome Extension) hiện đại, gọn gàng, s�
 4. [Hướng dẫn tạo GitHub Personal Access Token (PAT)](#-hướng-dẫn-tạo-github-personal-access-token-pat)
 5. [Hướng dẫn cài đặt Extension vào Chrome ("Load unpacked")](#-hướng-dẫn-cài-đặt-extension-vào-chrome-load-unpacked)
 6. [Hướng dẫn sử dụng](#-hướng-dẫn-sử-dụng)
-7. [Kiểm thử tự động](#-kiểm-thử-tự-động)
 
 ---
 
@@ -31,7 +30,6 @@ Một tiện ích mở rộng (Chrome Extension) hiện đại, gọn gàng, s�
 ## 📂 Cấu trúc thư mục
 
 ```text
-/home/yusei1708/code/chrome/
 ├── manifest.json              # File cấu hình Manifest V3 (quyền storage, action popup)
 ├── popup.html                 # Giao diện chính của popup (tuân thủ chuẩn bảo mật CSP)
 ├── popup.css                  # Giao diện phong cách GitHub hiện đại, dark mode
@@ -42,13 +40,7 @@ Một tiện ích mở rộng (Chrome Extension) hiện đại, gọn gàng, s�
 │   ├── icon16.png             # Icon kích thước 16x16 px
 │   ├── icon48.png             # Icon kích thước 48x48 px
 │   └── icon128.png            # Icon kích thước 128x128 px
-├── tests/                     # Bộ kiểm thử tự động toàn diện (125 test cases)
-│   ├── e2e_runner.js          # Test runner độc lập, không phụ thuộc package ngoài
-│   ├── tier1_features.test.js # Kiểm thử các tính năng cốt lõi và CSP
-│   ├── tier2_boundaries.test.js # Kiểm thử các trường hợp biên và dữ liệu ngoại lệ
-│   ├── tier3_combinations.test.js # Kiểm thử tích hợp đa module
-│   └── tier4_workloads.test.js    # Kiểm thử luồng trải nghiệm người dùng thực tế
-└── README.md                  # Hướng dẫn chi tiết bằng tiếng Việt
+└── README.md                  # Hướng dẫn sử dụng & giới thiệu
 ```
 
 ---
@@ -140,26 +132,3 @@ cd GitHub-Repository-Viewer
 - Toàn bộ token bí mật, ảnh đại diện và danh sách repository đã lưu trong `chrome.storage.local` sẽ được xóa hoàn toàn khỏi trình duyệt.
 - Giao diện lập tức quay về màn hình nhập token ban đầu.
 
----
-
-## 🧪 Kiểm thử tự động
-
-Dự án tích hợp sẵn bộ kiểm thử toàn diện gồm **125 bài test tự động** kiểm tra toàn bộ các khía cạnh: tính hợp lệ của Manifest V3, bảo mật CSP, xử lý token, phân trang Link header RFC 8288, phân loại lỗi API (401, 403, 429 rate limit reset), tìm kiếm tức thì và các kịch bản người dùng.
-
-Để chạy kiểm thử, bạn có thể thực thi lệnh sau trong thư mục dự án:
-
-```bash
-node tests/e2e_runner.js
-```
-
-Kết quả:
-```text
-====================================================
-Test Execution Summary:
-  Total Tests:    125
-  Passed:         125
-  Failed:         0
-  Skipped:        0
-====================================================
- PASS  All executed tests passed!
-```
