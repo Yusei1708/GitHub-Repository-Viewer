@@ -89,18 +89,23 @@ Một tiện ích mở rộng (Chrome Extension) hiện đại, gọn gàng, s�
 
 ---
 
-## 🚀 Hướng dẫn cài đặt Extension vào Chrome ("Load unpacked")
+## 🚀 Hướng dẫn cài đặt & Chạy Extension ("Load unpacked")
 
-1. Mở trình duyệt Google Chrome (hoặc Brave, Cốc Cốc, Microsoft Edge).
-2. Nhập vào thanh địa chỉ: `chrome://extensions` rồi nhấn **Enter**.
-3. Ở góc trên bên phải trang, bật công tắc **Developer mode** (Chế độ dành cho nhà phát triển).
-4. Ở góc trên bên trái, nhấp vào nút **Load unpacked** (Tải tiện ích đã giải nén).
-5. Trong cửa sổ chọn thư mục, tìm và chọn thư mục chứa mã nguồn:
-   ```text
-   /home/yusei1708/code/chrome
-   ```
-6. Bấm **Select** (hoặc Mở). Extension **GitHub Repository Viewer** sẽ xuất hiện ngay trong danh sách tiện ích của Chrome mà không có bất kỳ cảnh báo lỗi nào.
-7. Bấm vào biểu tượng mảnh ghép (Extensions) trên thanh công cụ của Chrome và ghim (Pin) **GitHub Repository Viewer** để tiện mở nhanh.
+### 1. Chuẩn bị mã nguồn:
+Nếu bạn tải mã nguồn về máy tính mới:
+```bash
+git clone https://github.com/Yusei1708/GitHub-Repository-Viewer.git
+cd GitHub-Repository-Viewer
+```
+> **Lưu ý**: Extension sử dụng mã nguồn thuần (Vanilla JavaScript Manifest V3), **không cần** `npm install` hay `npm run build`.
+
+### 2. Nạp vào Google Chrome (hoặc Edge, Brave, Cốc Cốc):
+1. Mở trình duyệt Chrome, truy cập vào thanh địa chỉ: `chrome://extensions` rồi nhấn **Enter**.
+2. Ở góc trên bên phải, bật công tắc **Developer mode** (Chế độ dành cho nhà phát triển).
+3. Ở góc trên bên trái, nhấp vào nút **Load unpacked** (Tải tiện ích đã giải nén).
+4. Chọn thư mục chứa mã nguồn extension (thư mục có tệp `manifest.json`).
+5. Tiện ích **GitHub Repository Viewer** sẽ xuất hiện ngay lập tức trong danh sách tiện ích.
+6. Bấm vào biểu tượng mảnh ghép (🧩) trên thanh công cụ của Chrome và ghim tiện ích để sử dụng nhanh.
 
 ---
 
