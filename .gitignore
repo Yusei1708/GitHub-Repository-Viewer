@@ -1,0 +1,9 @@
+.agents/
+*.log
+.DS_Store
+extension.zip
+tests/
+scripts/
+*.sh
+*.md
+!README.md
